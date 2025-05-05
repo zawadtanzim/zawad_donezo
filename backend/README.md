@@ -1,4 +1,4 @@
-# Todo Backend
+# Donezo Backend
 
 In order to spin this project up, there are a couple of things needed:
 

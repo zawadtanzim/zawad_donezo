@@ -1,4 +1,4 @@
-# Supabase Todo Application
+# Donezo Full Stack Application
 
 ## Backend
 
