@@ -24,6 +24,7 @@ function App() {
     <QueryClientProvider client={client}>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<h1> Hello World</h1>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
