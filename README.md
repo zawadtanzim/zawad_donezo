@@ -1,5 +1,7 @@
 # Donezo Full Stack Application
 
+This project was built as an assignment to create a full-stack CRUD application.
+
 ## Backend
 
 The backend is very simple. It connects to Supabase using Prisma (which is allowed and (documented)[https://supabase.com/partners/integrations/prisma] how to do).
