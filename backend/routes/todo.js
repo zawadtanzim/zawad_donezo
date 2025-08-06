@@ -56,27 +56,20 @@ router.post('/', async (req, res) => {
 
 // Define a PUT route for marking a todo as completed
 router.put("/:todoId/completed", async (req, res) => {
-  // Extract the `todoId` from the route parameter and convert it to a number
   const todoId = Number(req.params.todoId);
+  const { completed } = req.body; // Get the completed value from the request
 
   try {
-    // Use Prisma to update the todo with the specified ID
     const todo = await prisma.todo.update({
-      where: {
-        id: todoId,        // Match the todo based on its unique ID
-      },
-      data: {
-        completed: true,  // Update the `completed` field to `true`
-      },
+      where: { id: todoId },
+      data: { completed }, // Set to true or false based on request
     });
 
-    // Respond with a success status and include the updated todo's ID
     res.status(200).json({
       success: true,
       todo: todo.id,
     });
   } catch (e) {
-    // Handle any errors that occur during the update
     res.status(500).json({
       success: false,
       message: "Something went wrong, please try again later",
